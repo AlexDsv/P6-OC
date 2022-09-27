@@ -18,7 +18,7 @@ exports.signup = (req, res, next) => {
 };
 
 
-//Connexion à un compte déjà existant
+//Connexion à un compte déjà existant + assigner un token
 exports.login = (req, res, next) => {
 User.findOne({ email: req.body.email })
     .then((user) => { 
